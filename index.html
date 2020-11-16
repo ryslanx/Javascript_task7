@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fight Club</title>
+    <style>
+        .menu-item {
+            padding: 10px;
+            color: white;
+            background-color: #2b2828;
+            cursor: pointer;
+        }
+        #menu {
+            transition: visibility 0s, opacity 0.5s linear;
+        }
+        #menu-hider {
+            margin-top: 30px;
+        }
+        .highlighted_text {
+            font-size: 20px;
+            color: #2d84d4;
+        }
+        .hide {
+            visibility: hidden;
+            opacity: 0;
+        }
+        .show {
+            visibility: visible;
+            opacity: 1;
+        }
+        .block {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #2b2828;
+            display: inline-block;
+            background-color: #6262e9;
+        }
+        .carousel {
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .carousel-item {
+            width: 500px;
+            height: 500px;
+        }
+        .carousel-item img {
+            max-width: 100%;
+        }
+        .carousel-hide {
+            display: none;
+        }
+        .carousel-show {
+            display: block;
+        }
+        .fixed-menu {
+            position: fixed;
+            top: 0;
+            right: 0;
+        }
+        .fixed-menu-item {
+            cursor: pointer;
+            width: 150px;
+            height: 50px;
+            background-color: #2d84d4;
+        }
+    </style>
+</head>
+<body>
+<div id="content"></div>
+<h1>Правила бойцовского клуба</h1>
+<div id="wrap">
+    <div class="rules rule1">
+        <h2>Первое правило Бойцовского клуба.</h2>
+        <p>Никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule2">
+        <h2>Второе правило Бойцовского клуба.</h2>
+        <p>Никогда никому не рассказывать о Бойцовском клубе.</p>
+    </div>
+    <div class="rules rule3">
+        <h2>Третье правило Бойцовского клуба.</h2>
+        <p>В схватке участвуют только двое.</p>
+    </div>
+    <div class="rules rule4">
+        <h2>Четвертое правило Бойцовского клуба.</h2>
+        <p>Не более одного поединка за один раз.</p>
+        <div class="test">test
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+        </div>
+        <div class="test">test
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+        </div>
+        <div class="test">test
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+            <div class="test-2">test-2
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+                <div class="test-3">test-3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="rules rule5">
+        <h2>Пятое правило Бойцовского клуба.</h2>
+        <p>Бойцы сражаются без обуви и голые по пояс.</p>
+    </div>
+    <div class="rules rule6">
+        <h2>Шестое правило Бойцовского клуба.</h2>
+        <p>Поединок продолжается столько, сколько потребуется.</p>
+    </div>
+    <div class="rules rule7">
+        <h2>Седьмое правило Бойцовского клуба.</h2>
+        <p>Если противник потерял сознание или делает вид, что потерял, или говорит «Хватит» — поединок
+            окончен.</p>
+    </div>
+    <div class="rules rule8">
+        <h2>Восьмое и последнее правило Бойцовского клуба.</h2>
+        <p>Новичок обязан принять бой.</p>
+    </div>
+</div>
+<div id="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto aspernatur fuga fugit ipsum
+    voluptate. Adipisci nesciunt numquam soluta tenetur vitae! Aliquam at consequatur consequuntur deleniti eum maxime
+    voluptatem voluptatum. Adipisci amet, architecto assumenda, culpa cumque illo impedit inventore ipsa modi nam
+    placeat repudiandae similique vel. Optio placeat reiciendis sapiente voluptate.
+</div>
+
+<button id="hide-button">Hide text</button>
+
+
+<button id="hide-yourself">Hide myself</button>
+
+<form action="#" id="check-age-form" style="margin-top: 30px">
+    <input type="text" name="age" placeholder="Please enter your age ...">
+    <input type="submit" name="submit" value="Submit">
+</form>
+
+
+<div id="menu" style="display: flex; justify-content: space-evenly; margin-top: 50px;">
+    <div class="menu-item">First</div>
+    <div class="menu-item">Second</div>
+    <div class="menu-item">Third</div>
+    <div class="menu-item">Fourth</div>
+    <div class="menu-item">Fifth</div>
+    <div class="menu-item">Sixth</div>
+    <div class="menu-item">Seventh</div>
+</div>
+
+<button id="menu-hider">Hide menu</button>
+
+
+<div id="comments"></div>
+
+<form action="#" name="first-form">
+    <input type="text" name="number">
+    <input type="checkbox" checked="checked" name="checkbox-1">
+</form>
+
+<form action="#" name="second-form">
+    <input type="text" name="name">
+    <input type="checkbox" name="checkbox-2">
+</form>
+
+<button type="submit" id="submit-two">
+    Submit 2 forms
+</button>
+
+<form action="#" name="table-form">
+    <input type="text" name="rows">
+    <input type="text" name="columns">
+    <input type="text" name="inner">
+    <input type="submit" name="submit">
+</form>
+
+<div class="table"></div>
+
+
+<div class="carousel" id="carousel">
+    <div class="carousel-item">
+        <img src="img/img-1.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+        <img src="img/img-2.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+        <img src="img/img-3.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+        <img src="img/img-4.jpg" alt="">
+    </div>
+    <div class="carousel-item">
+        <img src="img/img-5.jpg" alt="">
+    </div>
+</div>
+<div class="navigation">
+    <button id="left">left</button>
+    <button id="right">right</button>
+</div>
+
+
+<form action="#" id="censored" name="censored">
+    <input type="text" name="text">
+</form>
+<button type="submit" id="submit-censored">Submit</button>
+
+
+<div class="fixed-menu">
+</div>
+
+
+<form action="#" name="users-filters">
+    <input type="checkbox" name="filter_1">
+    <input type="checkbox" name="filter_2">
+    <input type="checkbox" name="filter_3">
+</form>
+<button type="submit" id="user-shower">Show users</button>
+
+<div id="users">
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
